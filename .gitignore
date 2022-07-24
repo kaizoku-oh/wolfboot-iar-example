@@ -1,3 +1,20 @@
+# IDE
+prj/settings
+
+prj/bootloader/Debug
+prj/bootloader/Release
+prj/bootloader/settings
+prj/bootloader/*.dep
+prj/bootloader/*.dnx
+
+prj/application/Debug
+prj/application/Release
+prj/application/settings
+prj/application/*.dep
+prj/application/*.dnx
+
+.vscode
+
 # Prerequisites
 *.d
 
@@ -23,13 +40,13 @@
 *.lo
 
 # Shared objects (inc. Windows DLLs)
-*.dll
+# *.dll
 *.so
 *.so.*
 *.dylib
 
 # Executables
-*.exe
+# *.exe
 *.out
 *.app
 *.i*86
