@@ -82,7 +82,7 @@
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGBufferedTerminalOutput</name>
@@ -99,7 +99,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>32</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -224,6 +224,15 @@
                     <name>CCDefines</name>
                     <state>USE_HAL_DRIVER</state>
                     <state>STM32F401xE</state>
+                    <state>WOLFBOOT_FIXED_PARTITIONS</state>
+                    <state>PLATFORM_stm32f4</state>
+                    <state>ARCH_ARM</state>
+                    <state>WOLFSSL_USER_SETTINGS</state>
+                    <state>DEBUG_CONSOLE_ASSERT_DISABLE=1</state>
+                    <state>WOLFBOOT_SIGN_ECC256</state>
+                    <state>WOLFBOOT_HASH_SHA256</state>
+                    <state>WOLFSSL_SP_ASM</state>
+                    <state>WOLFSSL_SP_ARM_CORTEX_M_ASM</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -344,6 +353,8 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$/../bootloader</state>
+                    <state>$PROJ_DIR$/../../src/bootloader/include</state>
                     <state>$PROJ_DIR$/../../src/application/Core/Inc</state>
                     <state>$PROJ_DIR$/../../src/application/Drivers/STM32F4xx_HAL_Driver/Inc</state>
                     <state>$PROJ_DIR$/../../src/application/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy</state>
@@ -668,7 +679,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>208</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -1255,7 +1266,7 @@
                 </option>
                 <option>
                     <name>DSPExtension</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>TrustZone</name>
@@ -1300,6 +1311,15 @@
                     <state>NDEBUG</state>
                     <state>USE_HAL_DRIVER</state>
                     <state>STM32F401xE</state>
+                    <state>WOLFBOOT_FIXED_PARTITIONS</state>
+                    <state>PLATFORM_stm32f4</state>
+                    <state>ARCH_ARM</state>
+                    <state>WOLFSSL_USER_SETTINGS</state>
+                    <state>DEBUG_CONSOLE_ASSERT_DISABLE=1</state>
+                    <state>WOLFBOOT_SIGN_ECC256</state>
+                    <state>WOLFBOOT_HASH_SHA256</state>
+                    <state>WOLFSSL_SP_ASM</state>
+                    <state>WOLFSSL_SP_ARM_CORTEX_M_ASM</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -1420,6 +1440,8 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
+                    <state>$PROJ_DIR$/../bootloader</state>
+                    <state>$PROJ_DIR$/../../src/bootloader/include</state>
                     <state>$PROJ_DIR$/../../src/application/Core/Inc</state>
                     <state>$PROJ_DIR$/../../src/application/Drivers/STM32F4xx_HAL_Driver/Inc</state>
                     <state>$PROJ_DIR$/../../src/application/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy</state>
@@ -1744,7 +1766,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>208</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2235,5 +2257,14 @@
                 <name>$PROJ_DIR$\..\..\src\application\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c</name>
             </file>
         </group>
+    </group>
+    <group>
+        <name>WolfBoot</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\src\bootloader\src\libwolfboot.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\src\bootloader\hal\stm32f4.c</name>
+        </file>
     </group>
 </project>
