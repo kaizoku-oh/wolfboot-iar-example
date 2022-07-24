@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "wolfboot/wolfboot.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,7 +32,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define APP_VERSION 0
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -43,6 +43,7 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+uint32_t appVersion;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -88,16 +89,37 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  appVersion = wolfBoot_current_firmware_version();
   printf("==========================================================\r\n");
-  printf("APPLICATION VERSION: %d\r\n", APP_VERSION);
+  printf("APPLICATION VERSION: %d\r\n", appVersion);
   printf("==========================================================\r\n");
+  if(0 == appVersion)
+  {
+    printf("Switching to wolfBoot to start the firmware update in 10 sec");
+    for(uint8_t i = 0; i < 20; i++)
+    {
+      printf(".");
+      HAL_Delay(500);
+    }
+    printf("\r\n");
+    printf("Starting the update process\r\n");
+    wolfBoot_update_trigger();
+  }
+  else if(1 == appVersion)
+  {
+    wolfBoot_success();
+    printf("We are running the newest firmware version\r\n");
+  }
+  else
+  {
+    printf("Unknown app version %d won't do anything\r\n", appVersion);
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    printf("[%lu] Hello world!\r\n", HAL_GetTick());
     HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin);
     HAL_Delay(200);
     /* USER CODE END WHILE */
@@ -222,7 +244,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
 /**
   * @brief  Overwrite the standard printf function to UART
   * @param  s32Fd File descriptor

@@ -2929,4 +2929,13 @@
             </file>
         </group>
     </group>
+    <group>
+        <name>WolfBoot</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\src\bootloader\src\libwolfboot.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\src\bootloader\hal\stm32f4.c</name>
+        </file>
+    </group>
 </project>
