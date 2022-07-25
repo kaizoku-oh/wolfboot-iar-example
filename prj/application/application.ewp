@@ -353,7 +353,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$/../bootloader</state>
+                    <state>$PROJ_DIR$/../../src/common</state>
                     <state>$PROJ_DIR$/../../src/bootloader/include</state>
                     <state>$PROJ_DIR$/../../src/application/Core/Inc</state>
                     <state>$PROJ_DIR$/../../src/application/Drivers/STM32F4xx_HAL_Driver/Inc</state>
@@ -1440,7 +1440,7 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$/../bootloader</state>
+                    <state>$PROJ_DIR$/../../src/common</state>
                     <state>$PROJ_DIR$/../../src/bootloader/include</state>
                     <state>$PROJ_DIR$/../../src/application/Core/Inc</state>
                     <state>$PROJ_DIR$/../../src/application/Drivers/STM32F4xx_HAL_Driver/Inc</state>
