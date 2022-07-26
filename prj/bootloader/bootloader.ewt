@@ -2899,6 +2899,9 @@
             <name>$PROJ_DIR$\..\..\src\bootloader\src\image.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\src\bootloader\src\keystore.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\src\bootloader\src\libwolfboot.c</name>
         </file>
         <file>
