@@ -6,6 +6,7 @@ prj/bootloader/Release
 prj/bootloader/settings
 prj/bootloader/*.dep
 prj/bootloader/*.dnx
+prj/bootloader/*.der
 
 prj/application/Debug
 prj/application/Release
