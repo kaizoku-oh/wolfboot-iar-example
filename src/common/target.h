@@ -33,10 +33,4 @@
 #define WOLFBOOT_PARTITION_UPDATE_ADDRESS    0x40000
 #define WOLFBOOT_PARTITION_SWAP_ADDRESS      0x60000
 
-/* Load address in RAM for staged OS (update_ram only) */
-#define WOLFBOOT_DTS_BOOT_ADDRESS            
-#define WOLFBOOT_DTS_UPDATE_ADDRESS          
-#define WOLFBOOT_LOAD_ADDRESS                
-#define WOLFBOOT_LOAD_DTS_ADDRESS            
-
 #endif /* !H_TARGETS_TARGET_ */
