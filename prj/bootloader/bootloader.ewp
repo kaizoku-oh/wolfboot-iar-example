@@ -233,6 +233,7 @@
                     <state>WOLFSSL_SP_ARM_CORTEX_M_ASM</state>
                     <state>ARCH_FLASH_OFFSET=0x08000000</state>
                     <state>WOLFBOOT_FIXED_PARTITIONS</state>
+                    <state>IMAGE_HEADER_SIZE=0x200</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>

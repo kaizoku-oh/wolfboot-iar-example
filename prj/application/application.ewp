@@ -233,6 +233,7 @@
                     <state>WOLFBOOT_HASH_SHA256</state>
                     <state>WOLFSSL_SP_ASM</state>
                     <state>WOLFSSL_SP_ARM_CORTEX_M_ASM</state>
+                    <state>IMAGE_HEADER_SIZE=0x200</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
